@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html manifest="cmf.menifest">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Web App</title>
+</head>
+<body onload="showImage(1)">
+    <img id="image1" src="image1.jpg" alt="Image 1">
+    <img id="image2" src="image2.jpg" alt="Image2" style="display:none;">
+
+    <button onclick="showImage(1)">Show Image 1</button>
+    <button onclick="showImage(2)">Show Image 2</button>
+
+    <script>
+        // Function to show/hide images
+        function showImage(imageNumber) {
+            if (imageNumber === 1) {
+                document.getElementById('image1').style.display = 'block';
+                document.getElementById('image2').style.display = 'none';
+            } else {
+                document.getElementById('image1').style.display = 'none';
+                document.getElementById('image2').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
